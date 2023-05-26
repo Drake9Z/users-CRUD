@@ -1,0 +1,239 @@
+#root {
+  text-align: center;
+}
+
+:root{
+  --small-font: 18px;
+  --medium-font: 24px;
+  --big-font:32px;
+  --color1: rgb(25, 25, 94);
+  --color2: rgb(25, 25, 25) ;
+  --color3: rgb(190, 189, 189);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(199, 208, 255, 0.692);
+  color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: relative;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 4rem 0 1rem;
+}
+
+.title{
+  font-size: 45px;
+  padding: 2rem 1rem;
+  text-align: left;
+}
+
+.plus-button{
+  background-color: var(--color1);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: var(--small-font);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  margin: 3rem 2rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.plus-button i{
+  font-size: var(--big-font);
+}
+
+.form-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 20px;
+  width: 380px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  background-color: rgb(199, 208, 255);
+  box-shadow: 20px 20px 15px 5px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.form-label{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.form-label label{
+  color: var(--color2);
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.form-label input, .form-button{
+  border: 1px solid var(--color3);
+  outline: none;
+  width: 100%;
+  padding: 16px 10px;
+  background-color: rgba(255, 255, 255, 0.288);
+  border-radius: 10px;
+  box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.015),100px 100px 80px rgba(0, 0, 0, 0.03);
+  font-size: var(--small-font);
+}
+
+.form .form-button{
+  margin-top: 12px;
+  background-color: var(--color1);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-form, .close-form i{
+  position: absolute;
+  color: var(--color1);
+  right: 0;
+  top: 0;
+  margin: 0.5rem;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.user-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem ;
+}
+
+.user-card{
+  width: 360px;
+  max-width: 400px;
+  border: 1px solid var(--color3);
+  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  list-style: none;
+  text-align: left;
+}
+
+.user-card h2{
+  font-size: var(--medium-font);
+  border-bottom: 1px solid var(--color3);
+  padding: 0.3rem 0;
+}
+
+.card-info{
+  padding: 0.5rem 0;
+}
+
+.card-info h3{
+  color: var(--color3);
+  font-weight: light;
+  font-size: var(--small-font);
+}
+
+.card-info p{
+  font-size: var(--small-font);
+}
+
+.button-container{
+  width: 100%;
+  justify-content: right;
+  align-items: right;
+  text-align-last: right;
+}
+
+  .pencil, .trash{
+    font-size: var(--big-font);
+    width: 50px;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .pencil{
+    background-color: transparent;
+    border: 1px solid var(--color3);
+    color: var(--color3);
+  }
+
+  .trash{
+    background-color: rgb(221, 61, 61);
+    color: white;
+    border: none;
+  }
+
+  .trash:hover{
+    scale: 1.1;
+  }
+
+  .pencil:hover{
+    scale: 1.1;
+  }
+
+  @media (max-width: 415px) {
+
+    header{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .title, .plus-button{
+      margin: 1rem 0;
+      padding: 0;
+    }
+
+    .plus-button{
+      width: 320px;
+      border-radius: 10px;
+      padding: 0.5rem;
+    }
+
+    .form {
+      border: none;
+      border-radius: 20px;
+      width: 350px;
+      padding: 1rem 2rem;
+      margin: 0 auto;
+      background-color: rgb(199, 208, 255);
+      box-shadow: 20px 20px 15px 5px rgba(0, 0, 0, 0.25);
+    }
+  }
+  
